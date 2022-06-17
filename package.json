@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@rive-app/canvas": "^1.0.65"
+  },
+  "type": "module",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CadenZ",
+  "license": "MIT",
+  "description": "ICS3U portfolio"
+}

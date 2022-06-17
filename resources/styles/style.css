@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@keyframes bg-in {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(4px);
+  }
+}
+@keyframes content-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+body {
+  background-color: #222;
+}
+body p {
+  font-family: "Mulish";
+  font-size: 2vw;
+  color: whitesmoke;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+  margin: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  animation-name: bg-in;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 6vw;
+  color: whitesmoke;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  font-family: "Mulish";
+  font-weight: 100;
+  font-size: 3vw;
+  color: whitesmoke;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-me-container #about-me {
+  width: 60%;
+  height: auto;
+  font-size: 2vw;
+  text-align: center;
+  align-self: center;
+}
+
+.content-title {
+  font-family: "Mulish";
+  font-weight: 100;
+  font-size: 3vw;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 80%;
+  height: auto;
+  opacity: 0;
+  background-color: aquamarine;
+  border-style: none;
+  border-radius: 4px;
+  animation-name: content-in;
+  animation-delay: 1250ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
