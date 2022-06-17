@@ -3,6 +3,7 @@
 
 $font: 'Mulish';
 $bg-color: #222;
+$white: #d6d6d2;
 
 @mixin center {
     display: flex;
@@ -33,8 +34,6 @@ $bg-color: #222;
 body {
     background-color: $bg-color;
 
-    overflow: hidden;
-
     p {
         font-family: $font;
         font-size: 2vw;
@@ -44,6 +43,16 @@ body {
         
         @include center();
     }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .background-container {
@@ -103,14 +112,15 @@ body {
 }
 
 #down-arrow-container {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    @include center();
+    height: 200px;
 
     #down-arrow {
         width: 6vw;
         height: 4vw;
+        
+        bottom: 0px;
     }
 }
 
@@ -154,4 +164,18 @@ body {
     animation-fill-mode: forwards;
 
     padding: 10px;
+}
+
+#section-two {
+    width: 100vw;
+    height: 600px;
+    left: -10px;
+    top: 0px;
+
+    background-color: $white;
+
+    h1 {
+        font-family: $font;
+        margin-top: 100px;
+    }
 }
