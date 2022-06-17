@@ -33,6 +33,8 @@ $bg-color: #222;
 body {
     background-color: $bg-color;
 
+    overflow: hidden;
+
     p {
         font-family: $font;
         font-size: 2vw;
@@ -98,6 +100,23 @@ body {
         text-align: center;
         align-self: center;
     }
+}
+
+#down-arrow-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #down-arrow {
+        width: 6vw;
+        height: 4vw;
+    }
+}
+
+.space {
+    width: 100%;
+    height: 20vh;
 }
 
 .content-title {
