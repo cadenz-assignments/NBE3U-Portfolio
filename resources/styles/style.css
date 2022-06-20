@@ -19,15 +19,6 @@
 body {
   background-color: #222;
 }
-body p {
-  font-family: "Mulish";
-  font-size: 2vw;
-  color: whitesmoke;
-  margin-top: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 body::-webkit-scrollbar {
   display: none;
@@ -91,6 +82,13 @@ body {
   font-size: 2vw;
   text-align: center;
   align-self: center;
+  font-family: "Mulish";
+  font-size: 2vw;
+  color: whitesmoke;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #down-arrow-container {
@@ -142,16 +140,39 @@ body {
   padding: 10px;
 }
 
-#section-two {
-  width: 100vw;
-  height: 600px;
-  left: -10px;
-  top: 0px;
-  background-color: #d6d6d2;
-}
 #section-two h1 {
   font-family: "Mulish";
+  font-size: 6vw;
   margin-top: 100px;
+  color: #d6d6d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section-two .module {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 15vh;
+}
+#section-two .module h2 {
+  font-family: "Mulish";
+  font-size: 2vw;
+  color: #d6d6d2;
+  margin: 0px;
+}
+#section-two .module img {
+  width: 20vw;
+  height: auto;
+}
+#section-two .module p {
+  font-family: "Mulish";
+  font-size: 1.4vw;
+  color: #d6d6d2;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.8vh;
+  width: auto;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

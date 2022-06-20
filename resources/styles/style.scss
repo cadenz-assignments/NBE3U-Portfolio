@@ -33,16 +33,6 @@ $white: #d6d6d2;
 
 body {
     background-color: $bg-color;
-
-    p {
-        font-family: $font;
-        font-size: 2vw;
-        color: whitesmoke;
-
-        margin-top: 20vh;
-        
-        @include center();
-    }
 }
 
 body::-webkit-scrollbar {
@@ -108,6 +98,14 @@ body {
     
         text-align: center;
         align-self: center;
+
+        font-family: $font;
+        font-size: 2vw;
+        color: whitesmoke;
+
+        margin-top: 20vh;
+        
+        @include center();
     }
 }
 
@@ -167,15 +165,46 @@ body {
 }
 
 #section-two {
-    width: 100vw;
-    height: 600px;
-    left: -10px;
-    top: 0px;
-
-    background-color: $white;
-
     h1 {
         font-family: $font;
+        font-size: 6vw;
+
         margin-top: 100px;
+        color: $white;
+
+        @include center();
+    }
+
+    .module {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 15vh;
+
+        h2 {
+            font-family: $font;
+            font-size: 2vw;
+            color: $white;
+            margin: 0px;
+        }
+    
+        img {
+            width: 20vw;
+            height: auto;
+        }
+    
+        p {
+            font-family: $font;
+            font-size: 1.4vw;
+
+            color: $white;
+
+            padding: 0px;
+            margin: 0px;
+
+            margin-top: 0.8vh;
+
+            width: auto;
+            height: auto;
+        }
     }
 }
