@@ -1,5 +1,4 @@
 document.querySelector(".wrapper").addEventListener("scroll", () => {
-    console.log("scrollllllllllllllll");
     let section = document.getElementById("section-two");
     let modules = section.children;
 
