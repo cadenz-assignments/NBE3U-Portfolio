@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 $font: 'Mulish';
+$font2: 'Poppins';
 $bg-color: #222;
 $white: #d6d6d2;
+$black: #131c33;
 
 @mixin center {
     display: flex;
@@ -33,91 +36,121 @@ $white: #d6d6d2;
 
 body {
     background-color: $bg-color;
+    margin: 0px;
+
+    a:link {
+        color: aquamarine;
+    }
+
+    a:visited {
+        color: aqua;
+    }
 }
 
-body::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
     display: none;
 }
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-.background-container {
-    width: 100%;
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: clip;
+
+    perspective: 20px;
+}
+
+header {
+    position: relative;
     height: 100%;
 
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    transform-style: preserve-3d;
     z-index: -2;
-    margin: 0px;
-
-    position: absolute;
-    left: 0px;
-    top: 0px;
-
-    animation-name: bg-in;
-    animation-duration: 250ms;
-    animation-fill-mode: forwards;
 
     @include center();
-}
 
-.title {
-    font-family: $font;
-    font-weight: 300;
-    font-size: 6vw;
-    color: whitesmoke;
+    #background {
+        transform: translateZ(-20px) scale(2.5);
 
-    margin-bottom: 0px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
 
-    @include center()
-}
+        animation-name: bg-in;
+        animation-duration: 250ms;
+        animation-fill-mode: forwards;
 
-.subtitle {
-    font-family: $font;
-    font-weight: 100;
-    font-size: 3vw;
-    color: whitesmoke;
+        z-index: -1;
 
-    margin-top: 5px;
-
-    @include center();
-}
-
-#about-me-container {
-    @include center();
-
-    #about-me {
-        width: 60%;
-        height: auto;
-    
-        font-size: 2vw;
-    
-        text-align: center;
-        align-self: center;
-
-        font-family: $font;
-        font-size: 2vw;
-        color: whitesmoke;
-
-        margin-top: 20vh;
-        
         @include center();
+    }
+
+    #text {
+        @include center();
+
+        .title {
+            font-family: $font;
+            font-weight: 300;
+            font-size: 6vw;
+            color: whitesmoke;
+            margin-bottom: 0px;
+        }
+
+        .subtitle {
+            font-family: $font;
+            font-weight: 100;
+            font-size: 3vw;
+            color: whitesmoke;
+
+            margin-top: 5px;
+        }
+
+        #about-me-container {
+            transform: translateZ(-5px);
+
+            @include center();
+
+            #about-me {
+                width: 60%;
+                height: auto;
+
+                font-size: 2vw;
+
+                text-align: center;
+                align-self: center;
+
+                font-family: $font;
+                font-size: 2vw;
+                color: whitesmoke;
+
+                margin-top: 20vh;
+
+                @include center();
+            }
+        }
     }
 }
 
 #down-arrow-container {
-
     @include center();
     height: 200px;
 
     #down-arrow {
         width: 6vw;
         height: 4vw;
-        
+
         bottom: 0px;
     }
 }
@@ -165,6 +198,10 @@ body {
 }
 
 #section-two {
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
     h1 {
         font-family: $font;
         font-size: 6vw;
@@ -174,29 +211,55 @@ body {
 
         @include center();
     }
+}
 
-    .module {
-        margin-left: 10vw;
-        margin-right: 10vw;
-        margin-top: 15vh;
+$oe: odd, even;
+
+@each $i in $oe {
+    $col: local value;
+    $col2: local value;
+
+    @if $i == odd {
+        $col: $white;
+        $col2: $black;
+    } @else {
+        $col: $black;
+        $col2: $white;
+    }
+
+    .module-#{$i} {
+        min-height: 100vh;
+        background-color: $col2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         h2 {
-            font-family: $font;
-            font-size: 2vw;
-            color: $white;
+            @include center();
+
+            font-family: $font2;
+            font-size: 3vw;
+            color: $col;
             margin: 0px;
         }
-    
+
+        div {
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+
         img {
             width: 20vw;
             height: auto;
         }
-    
+
         p {
             font-family: $font;
             font-size: 1.4vw;
 
-            color: $white;
+            color: $col;
 
             padding: 0px;
             margin: 0px;
@@ -206,5 +269,25 @@ body {
             width: auto;
             height: auto;
         }
+
+        ul {
+            font-family: $font;
+            font-size: 1.2vw;
+
+            color: $col;
+            margin-top: 0.8vh;
+        }
     }
+}
+
+.active1 {
+    animation: backInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.active2 {
+    animation: backInRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }

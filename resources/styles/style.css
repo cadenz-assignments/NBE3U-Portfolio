@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @keyframes bg-in {
   from {
     filter: blur(0px);
@@ -18,65 +19,86 @@
 }
 body {
   background-color: #222;
+  margin: 0px;
+}
+body a:link {
+  color: aquamarine;
+}
+body a:visited {
+  color: aqua;
 }
 
-body::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-body {
+.wrapper {
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
 }
 
-.background-container {
-  width: 100%;
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: clip;
+  perspective: 20px;
+}
+
+header {
+  position: relative;
   height: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
   z-index: -2;
-  margin: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  animation-name: bg-in;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.title {
+header #background {
+  transform: translateZ(-20px) scale(2.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation-name: bg-in;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #text .title {
   font-family: "Mulish";
   font-weight: 300;
   font-size: 6vw;
   color: whitesmoke;
   margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
-.subtitle {
+header #text .subtitle {
   font-family: "Mulish";
   font-weight: 100;
   font-size: 3vw;
   color: whitesmoke;
   margin-top: 5px;
+}
+header #text #about-me-container {
+  transform: translateZ(-5px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-#about-me-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#about-me-container #about-me {
+header #text #about-me-container #about-me {
   width: 60%;
   height: auto;
   font-size: 2vw;
@@ -140,6 +162,10 @@ body {
   padding: 10px;
 }
 
+#section-two {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
 #section-two h1 {
   font-family: "Mulish";
   font-size: 6vw;
@@ -149,22 +175,33 @@ body {
   flex-direction: column;
   align-items: center;
 }
-#section-two .module {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 15vh;
+
+.module-odd {
+  min-height: 100vh;
+  background-color: #131c33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#section-two .module h2 {
-  font-family: "Mulish";
-  font-size: 2vw;
+.module-odd h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 3vw;
   color: #d6d6d2;
   margin: 0px;
 }
-#section-two .module img {
+.module-odd div {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.module-odd img {
   width: 20vw;
   height: auto;
 }
-#section-two .module p {
+.module-odd p {
   font-family: "Mulish";
   font-size: 1.4vw;
   color: #d6d6d2;
@@ -173,6 +210,66 @@ body {
   margin-top: 0.8vh;
   width: auto;
   height: auto;
+}
+.module-odd ul {
+  font-family: "Mulish";
+  font-size: 1.2vw;
+  color: #d6d6d2;
+  margin-top: 0.8vh;
+}
+
+.module-even {
+  min-height: 100vh;
+  background-color: #d6d6d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.module-even h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 3vw;
+  color: #131c33;
+  margin: 0px;
+}
+.module-even div {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.module-even img {
+  width: 20vw;
+  height: auto;
+}
+.module-even p {
+  font-family: "Mulish";
+  font-size: 1.4vw;
+  color: #131c33;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.8vh;
+  width: auto;
+  height: auto;
+}
+.module-even ul {
+  font-family: "Mulish";
+  font-size: 1.2vw;
+  color: #131c33;
+  margin-top: 0.8vh;
+}
+
+.active1 {
+  animation: backInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.active2 {
+  animation: backInRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
