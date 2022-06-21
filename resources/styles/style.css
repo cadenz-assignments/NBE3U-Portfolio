@@ -200,6 +200,7 @@ header #text #about-me-container #about-me {
 .module-odd img {
   width: 20vw;
   height: auto;
+  float: right;
 }
 .module-odd p {
   font-family: "Mulish";
@@ -242,6 +243,7 @@ header #text #about-me-container #about-me {
 .module-even img {
   width: 20vw;
   height: auto;
+  float: left;
 }
 .module-even p {
   font-family: "Mulish";

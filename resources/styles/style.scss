@@ -253,6 +253,12 @@ $oe: odd, even;
         img {
             width: 20vw;
             height: auto;
+
+            @if $i == odd {
+                float: right;
+            } @else {
+                float: left;
+            }
         }
 
         p {
