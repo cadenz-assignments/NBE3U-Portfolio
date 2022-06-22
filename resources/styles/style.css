@@ -261,6 +261,8 @@ section h1 {
 .project-odd video {
   margin: 4vw;
   box-shadow: 6px 10px #222;
+  width: 60%;
+  height: auto;
 }
 .project-odd figure {
   display: flex;
@@ -367,6 +369,8 @@ section h1 {
 .project-even video {
   margin: 4vw;
   box-shadow: 6px 10px #d6d6d2;
+  width: 60%;
+  height: auto;
 }
 .project-even figure {
   display: flex;
