@@ -1,5 +1,5 @@
 document.querySelector(".wrapper").addEventListener("scroll", () => {
-    let section = document.getElementById("section-two");
+    let section = document.querySelector("section");
     let modules = section.children;
 
     for (let i = 1; i < modules.length; i++) {

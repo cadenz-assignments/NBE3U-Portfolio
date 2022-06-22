@@ -6,7 +6,7 @@
     filter: blur(0px);
   }
   to {
-    filter: blur(4px);
+    filter: blur(2px);
   }
 }
 @keyframes content-in {
@@ -59,7 +59,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-header #background {
+header .background {
   transform: translateZ(-20px) scale(2.5);
   position: absolute;
   height: 100%;
@@ -73,32 +73,32 @@ header #background {
   flex-direction: column;
   align-items: center;
 }
-header #text {
+header .text {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header #text .title {
+header .text .title {
   font-family: "Mulish";
   font-weight: 300;
   font-size: 6vw;
   color: whitesmoke;
   margin-bottom: 0px;
 }
-header #text .subtitle {
+header .text .subtitle {
   font-family: "Mulish";
   font-weight: 100;
   font-size: 3vw;
   color: whitesmoke;
   margin-top: 5px;
 }
-header #text #about-me-container {
+header .text .header-text-container {
   transform: translateZ(-5px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header #text #about-me-container #about-me {
+header .text .header-text-container .header-text {
   width: 60%;
   height: auto;
   font-size: 2vw;
@@ -162,11 +162,11 @@ header #text #about-me-container #about-me {
   padding: 10px;
 }
 
-#section-two {
+section {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
-#section-two h1 {
+section h1 {
   font-family: "Mulish";
   font-size: 6vw;
   margin-top: 100px;
@@ -219,6 +219,66 @@ header #text #about-me-container #about-me {
   margin-top: 0.8vh;
 }
 
+.project-odd {
+  min-height: 100vh;
+  background-color: #131c33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
+}
+.project-odd h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 3vw;
+  color: #d6d6d2;
+  margin: 0px;
+}
+.project-odd div {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  align-items: center;
+}
+.project-odd img {
+  max-width: 35vw;
+  height: auto;
+  margin: 2vw;
+}
+.project-odd p {
+  font-family: "Mulish";
+  font-size: 1.6vw;
+  color: #d6d6d2;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.8vh;
+  width: auto;
+  height: auto;
+}
+.project-odd video {
+  margin: 4vw;
+  box-shadow: 6px 10px #222;
+}
+.project-odd figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 60vh;
+  overflow: clip;
+}
+.project-odd figure img {
+  box-shadow: 6px 10px #222;
+}
+.project-odd figure figcaption {
+  color: #d6d6d2;
+  font-family: "Mulish";
+  font-size: 1.4vw;
+}
+
 .module-even {
   min-height: 100vh;
   background-color: #d6d6d2;
@@ -248,6 +308,7 @@ header #text #about-me-container #about-me {
 .module-even p {
   font-family: "Mulish";
   font-size: 1.4vw;
+  font-weight: 600;
   color: #131c33;
   padding: 0px;
   margin: 0px;
@@ -258,8 +319,70 @@ header #text #about-me-container #about-me {
 .module-even ul {
   font-family: "Mulish";
   font-size: 1.2vw;
+  font-weight: 600;
   color: #131c33;
   margin-top: 0.8vh;
+}
+
+.project-even {
+  min-height: 100vh;
+  background-color: #d6d6d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
+}
+.project-even h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 3vw;
+  color: #131c33;
+  margin: 0px;
+}
+.project-even div {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  align-items: center;
+}
+.project-even img {
+  max-width: 35vw;
+  height: auto;
+  margin: 2vw;
+}
+.project-even p {
+  font-family: "Mulish";
+  font-size: 1.6vw;
+  font-weight: 600;
+  color: #131c33;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.8vh;
+  width: auto;
+  height: auto;
+}
+.project-even video {
+  margin: 4vw;
+  box-shadow: 6px 10px #d6d6d2;
+}
+.project-even figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 60vh;
+  overflow: clip;
+}
+.project-even figure img {
+  box-shadow: 6px 10px #d6d6d2;
+}
+.project-even figure figcaption {
+  color: #d6d6d2;
+  font-family: "Mulish";
+  font-size: 1.4vw;
 }
 
 .active1 {

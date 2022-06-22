@@ -20,7 +20,7 @@ $black: #131c33;
     }
 
     to {
-        filter: blur(4px);
+        filter: blur(2px);
     }
 }
 
@@ -80,7 +80,7 @@ header {
 
     @include center();
 
-    #background {
+    .background {
         transform: translateZ(-20px) scale(2.5);
 
         position: absolute;
@@ -97,7 +97,7 @@ header {
         @include center();
     }
 
-    #text {
+    .text {
         @include center();
 
         .title {
@@ -117,12 +117,12 @@ header {
             margin-top: 5px;
         }
 
-        #about-me-container {
+        .header-text-container {
             transform: translateZ(-5px);
 
             @include center();
 
-            #about-me {
+            .header-text {
                 width: 60%;
                 height: auto;
 
@@ -197,7 +197,7 @@ header {
     padding: 10px;
 }
 
-#section-two {
+section {
 
     margin-top: 10vh;
     margin-bottom: 10vh;
@@ -218,13 +218,16 @@ $oe: odd, even;
 @each $i in $oe {
     $col: local value;
     $col2: local value;
+    $col3: local value;
 
     @if $i == odd {
         $col: $white;
         $col2: $black;
+        $col3: $bg-color;
     } @else {
         $col: $black;
         $col2: $white;
+        $col3: $white;
     }
 
     .module-#{$i} {
@@ -265,6 +268,10 @@ $oe: odd, even;
             font-family: $font;
             font-size: 1.4vw;
 
+            @if $i == even {
+                font-weight: 600;
+            }
+
             color: $col;
 
             padding: 0px;
@@ -279,9 +286,87 @@ $oe: odd, even;
         ul {
             font-family: $font;
             font-size: 1.2vw;
-
+            @if $i == even {
+                font-weight: 600;
+            }
             color: $col;
             margin-top: 0.8vh;
+        }
+    }
+
+    .project-#{$i} {
+        min-height: 100vh;
+        background-color: $col2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 10vh;
+
+        h2 {
+            @include center();
+
+            font-family: $font2;
+            font-size: 3vw;
+            color: $col;
+            margin: 0px;
+        }
+
+        div {
+            margin-left: 10vw;
+            margin-right: 10vw;
+
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            max-width: 35vw;
+            height: auto;
+            margin: 2vw;
+        }
+
+        p {
+            font-family: $font;
+            font-size: 1.6vw;
+            
+            @if $i == even {
+                font-weight: 600;
+            }
+            color: $col;
+
+            padding: 0px;
+            margin: 0px;
+
+            margin-top: 0.8vh;
+
+            width: auto;
+            height: auto;
+        }
+
+        video {
+            margin: 4vw;
+            box-shadow: 6px 10px $col3;
+        }
+
+        figure {
+            @include center();
+
+            width: 40vw;
+            height: 60vh;
+            overflow: clip;
+
+            img {
+                box-shadow: 6px 10px $col3;
+            }
+
+            figcaption {
+                color: $white;
+                font-family: $font;
+                font-size: 1.4vw;
+            }
         }
     }
 }
