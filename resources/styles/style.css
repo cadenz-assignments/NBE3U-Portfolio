@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@keyframes bg-in {
-  from {
-    filter: blur(0px);
-  }
-  to {
-    filter: blur(2px);
-  }
-}
 @keyframes content-in {
   from {
     opacity: 0;
@@ -65,9 +57,6 @@ header .background {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation-name: bg-in;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -105,7 +94,6 @@ header .text .header-text-container .header-text {
   text-align: center;
   align-self: center;
   font-family: "Mulish";
-  font-size: 2vw;
   color: whitesmoke;
   margin-top: 20vh;
   display: flex;

@@ -14,16 +14,6 @@ $black: #131c33;
     align-items: center;
 }
 
-@keyframes bg-in {
-    from {
-        filter: blur(0px);
-    }
-
-    to {
-        filter: blur(2px);
-    }
-}
-
 @keyframes content-in {
     from {
         opacity: 0;
@@ -88,10 +78,6 @@ header {
         width: 100%;
         object-fit: cover;
 
-        animation-name: bg-in;
-        animation-duration: 250ms;
-        animation-fill-mode: forwards;
-
         z-index: -1;
 
         @include center();
@@ -132,7 +118,6 @@ header {
                 align-self: center;
 
                 font-family: $font;
-                font-size: 2vw;
                 color: whitesmoke;
 
                 margin-top: 20vh;
