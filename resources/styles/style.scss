@@ -2,11 +2,20 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+@font-face {
+    font-family: DreamAvn;
+    src: url("../Dream Avenue.ttf");
+}
+
+:root {
+    font-synthesis: none;
+}
+
 $font: 'Mulish';
 $font2: 'Poppins';
-$bg-color: #222;
-$white: #d6d6d2;
-$black: #131c33;
+$bg-color: #222222;
+$white: rgba(#EDDDC6, 0.95);
+$black: rgba(#48362C, 0.95);
 
 @mixin center {
     display: flex;
@@ -26,7 +35,7 @@ $black: #131c33;
 
 body {
     background-color: $bg-color;
-    margin: 0px;
+    margin: 0;
 
     a:link {
         color: aquamarine;
@@ -74,7 +83,6 @@ header {
         transform: translateZ(-20px) scale(2.5);
 
         position: absolute;
-        height: 100%;
         width: 100%;
         object-fit: cover;
 
@@ -87,16 +95,15 @@ header {
         @include center();
 
         .title {
-            font-family: $font;
-            font-weight: 300;
+            font-family: DreamAvn, sans-serif;
+            font-weight: 100;
             font-size: 6vw;
             color: whitesmoke;
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
 
         .subtitle {
             font-family: $font;
-            font-weight: 100;
             font-size: 3vw;
             color: whitesmoke;
 
@@ -216,8 +223,11 @@ $oe: odd, even;
     }
 
     .module-#{$i} {
-        min-height: 100vh;
+        min-height: 75vh;
+        height: auto;
         background-color: $col2;
+        
+        margin-bottom: 128px;
 
         display: flex;
         flex-direction: column;

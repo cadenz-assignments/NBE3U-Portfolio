@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@font-face {
+  font-family: DreamAvn;
+  src: url("../Dream Avenue.ttf");
+}
+:root {
+  font-synthesis: none;
+}
+
 @keyframes content-in {
   from {
     opacity: 0;
@@ -10,8 +18,8 @@
   }
 }
 body {
-  background-color: #222;
-  margin: 0px;
+  background-color: #222222;
+  margin: 0;
 }
 body a:link {
   color: aquamarine;
@@ -54,7 +62,6 @@ header {
 header .background {
   transform: translateZ(-20px) scale(2.5);
   position: absolute;
-  height: 100%;
   width: 100%;
   object-fit: cover;
   z-index: -1;
@@ -68,15 +75,14 @@ header .text {
   align-items: center;
 }
 header .text .title {
-  font-family: "Mulish";
-  font-weight: 300;
+  font-family: DreamAvn, sans-serif;
+  font-weight: 100;
   font-size: 6vw;
   color: whitesmoke;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 header .text .subtitle {
   font-family: "Mulish";
-  font-weight: 100;
   font-size: 3vw;
   color: whitesmoke;
   margin-top: 5px;
@@ -158,15 +164,17 @@ section h1 {
   font-family: "Mulish";
   font-size: 6vw;
   margin-top: 100px;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .module-odd {
-  min-height: 100vh;
-  background-color: #131c33;
+  min-height: 75vh;
+  height: auto;
+  background-color: rgba(72, 54, 44, 0.95);
+  margin-bottom: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,7 +186,7 @@ section h1 {
   align-items: center;
   font-family: "Poppins";
   font-size: 3vw;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   margin: 0px;
 }
 .module-odd div {
@@ -193,7 +201,7 @@ section h1 {
 .module-odd p {
   font-family: "Mulish";
   font-size: 1.4vw;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   padding: 0px;
   margin: 0px;
   margin-top: 0.8vh;
@@ -203,13 +211,13 @@ section h1 {
 .module-odd ul {
   font-family: "Mulish";
   font-size: 1.2vw;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   margin-top: 0.8vh;
 }
 
 .project-odd {
   min-height: 100vh;
-  background-color: #131c33;
+  background-color: rgba(72, 54, 44, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +230,7 @@ section h1 {
   align-items: center;
   font-family: "Poppins";
   font-size: 3vw;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   margin: 0px;
 }
 .project-odd div {
@@ -239,7 +247,7 @@ section h1 {
 .project-odd p {
   font-family: "Mulish";
   font-size: 1.6vw;
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   padding: 0px;
   margin: 0px;
   margin-top: 0.8vh;
@@ -248,7 +256,7 @@ section h1 {
 }
 .project-odd video {
   margin: 4vw;
-  box-shadow: 6px 10px #222;
+  box-shadow: 6px 10px #222222;
   width: 60%;
   height: auto;
 }
@@ -261,17 +269,19 @@ section h1 {
   overflow: clip;
 }
 .project-odd figure img {
-  box-shadow: 6px 10px #222;
+  box-shadow: 6px 10px #222222;
 }
 .project-odd figure figcaption {
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   font-family: "Mulish";
   font-size: 1.4vw;
 }
 
 .module-even {
-  min-height: 100vh;
-  background-color: #d6d6d2;
+  min-height: 75vh;
+  height: auto;
+  background-color: rgba(237, 221, 198, 0.95);
+  margin-bottom: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -283,7 +293,7 @@ section h1 {
   align-items: center;
   font-family: "Poppins";
   font-size: 3vw;
-  color: #131c33;
+  color: rgba(72, 54, 44, 0.95);
   margin: 0px;
 }
 .module-even div {
@@ -299,7 +309,7 @@ section h1 {
   font-family: "Mulish";
   font-size: 1.4vw;
   font-weight: 600;
-  color: #131c33;
+  color: rgba(72, 54, 44, 0.95);
   padding: 0px;
   margin: 0px;
   margin-top: 0.8vh;
@@ -310,13 +320,13 @@ section h1 {
   font-family: "Mulish";
   font-size: 1.2vw;
   font-weight: 600;
-  color: #131c33;
+  color: rgba(72, 54, 44, 0.95);
   margin-top: 0.8vh;
 }
 
 .project-even {
   min-height: 100vh;
-  background-color: #d6d6d2;
+  background-color: rgba(237, 221, 198, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,7 +339,7 @@ section h1 {
   align-items: center;
   font-family: "Poppins";
   font-size: 3vw;
-  color: #131c33;
+  color: rgba(72, 54, 44, 0.95);
   margin: 0px;
 }
 .project-even div {
@@ -347,7 +357,7 @@ section h1 {
   font-family: "Mulish";
   font-size: 1.6vw;
   font-weight: 600;
-  color: #131c33;
+  color: rgba(72, 54, 44, 0.95);
   padding: 0px;
   margin: 0px;
   margin-top: 0.8vh;
@@ -356,7 +366,7 @@ section h1 {
 }
 .project-even video {
   margin: 4vw;
-  box-shadow: 6px 10px #d6d6d2;
+  box-shadow: 6px 10px rgba(237, 221, 198, 0.95);
   width: 60%;
   height: auto;
 }
@@ -369,10 +379,10 @@ section h1 {
   overflow: clip;
 }
 .project-even figure img {
-  box-shadow: 6px 10px #d6d6d2;
+  box-shadow: 6px 10px rgba(237, 221, 198, 0.95);
 }
 .project-even figure figcaption {
-  color: #d6d6d2;
+  color: rgba(237, 221, 198, 0.95);
   font-family: "Mulish";
   font-size: 1.4vw;
 }
