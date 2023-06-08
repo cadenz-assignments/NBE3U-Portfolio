@@ -38,11 +38,11 @@ body {
     margin: 0;
 
     a:link {
-        color: aquamarine;
+        color: #a1d3c9;
     }
 
     a:visited {
-        color: aqua;
+        color: #81a19a;
     }
 }
 
@@ -228,6 +228,8 @@ $oe: odd, even;
         background-color: $col2;
         
         margin-bottom: 128px;
+        padding-bottom: 64px;
+        padding-top: 48px;
 
         display: flex;
         flex-direction: column;
@@ -240,10 +242,10 @@ $oe: odd, even;
             font-family: $font2;
             font-size: 3vw;
             color: $col;
-            margin: 0px;
+            margin: 0;
         }
 
-        div {
+        .module-content {
             margin-left: 10vw;
             margin-right: 10vw;
         }

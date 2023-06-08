@@ -13,7 +13,7 @@ document.querySelector(".wrapper").addEventListener("scroll", () => {
             const child = module.children[j];
             let className = "active1";
             
-            if (j % 2 == 0) {
+            if (j % 2 === 0) {
                 className = "active2";
             }
 
