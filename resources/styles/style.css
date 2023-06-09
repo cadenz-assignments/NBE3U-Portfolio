@@ -198,6 +198,7 @@ section h1 {
 .module-odd img {
   width: 20vw;
   height: auto;
+  margin: 16px;
   float: right;
 }
 .module-odd p {
@@ -307,6 +308,7 @@ section h1 {
 .module-even img {
   width: 20vw;
   height: auto;
+  margin: 16px;
   float: left;
 }
 .module-even p {
@@ -401,6 +403,15 @@ section h1 {
   animation: backInRight;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+#food-sovereignty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#food-sovereignty #infographic {
+  width: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */

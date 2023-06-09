@@ -253,6 +253,7 @@ $oe: odd, even;
         img {
             width: 20vw;
             height: auto;
+            margin: 16px;
 
             @if $i == odd {
                 float: right;
@@ -381,4 +382,14 @@ $oe: odd, even;
     animation: backInRight;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+#food-sovereignty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    #infographic {
+        width: 80%;
+    }
 }
