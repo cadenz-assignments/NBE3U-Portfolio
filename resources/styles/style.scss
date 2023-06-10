@@ -249,6 +249,16 @@ $oe: odd, even;
             margin-left: 10vw;
             margin-right: 10vw;
         }
+        
+        .video-container {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            p {
+                max-width: 60%;
+            }
+        }
 
         img {
             width: 20vw;
@@ -272,10 +282,8 @@ $oe: odd, even;
 
             color: $col;
 
-            padding: 0px;
-            margin: 0px;
-
-            margin-top: 0.8vh;
+            padding: 0;
+            margin: 0.8vh 0 0;
 
             width: auto;
             height: auto;
@@ -335,21 +343,17 @@ $oe: odd, even;
             }
             color: $col;
 
-            padding: 0px;
-            margin: 0px;
-
-            margin-top: 0.8vh;
+            padding: 0;
+            margin: 0.8vh 0 0;
 
             width: auto;
             height: auto;
         }
 
-        video {
+        iframe {
             margin: 4vw;
             box-shadow: 6px 10px $col3;
-
-            width: 60%;
-            height: auto;
+            float: left;
         }
 
         figure {
@@ -390,6 +394,6 @@ $oe: odd, even;
     align-items: center;
     
     #infographic {
-        width: 80%;
+        width: 40%;
     }
 }
