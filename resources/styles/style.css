@@ -266,7 +266,7 @@ section h1 {
 .project-odd iframe {
   margin: 4vw;
   box-shadow: 6px 10px #222222;
-  float: left;
+  float: right;
 }
 .project-odd figure {
   display: flex;
